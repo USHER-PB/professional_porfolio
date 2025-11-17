@@ -31,7 +31,7 @@ export default function Footer() {
             </h3>
             <p className="text-gray-400 mb-4">
               Showcasing expertise, experience, and passion for excellence. 
-              Let's connect and explore opportunities together.
+              Let&apos;s connect and explore opportunities together.
             </p>
             <div className="flex gap-4">
               {socialLinks.map((social, index) => (

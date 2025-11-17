@@ -97,7 +97,7 @@ export default function Contact() {
           </h2>
           <div className="w-24 h-1 bg-primary-500 mx-auto mb-6"></div>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Interested in working together? Let's discuss how I can contribute to your team's success.
+            Interested in working together? Let&apos;s discuss how I can contribute to your team&apos;s success.
           </p>
         </motion.div>
 
@@ -111,7 +111,7 @@ export default function Contact() {
             <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
             <p className="text-gray-400 mb-8 leading-relaxed">
               Feel free to reach out through any of the following channels. 
-              I'm always open to discussing new opportunities, projects, or collaborations.
+              I&apos;m always open to discussing new opportunities, projects, or collaborations.
             </p>
 
             <div className="space-y-6">

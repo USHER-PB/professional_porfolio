@@ -28,7 +28,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-5xl md:text-7xl font-bold text-white mb-4"
           >
-            Your Uncle's Name
+            Your Uncle&apos;s Name
           </motion.h1>
 
           <motion.p
