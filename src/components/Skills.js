@@ -11,65 +11,67 @@ import {
   FaPalette,
   FaServer,
   FaMobile,
-  FaCloud
+  FaCloud,
+  FaHome,
+  FaBuilding
 } from 'react-icons/fa'
 
 export default function Skills() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
-  const skillCategories = [
+  const projectCategories = [
     {
-      category: 'Technical Skills',
-      icon: <FaCode className="text-3xl" />,
+      category: 'Residential Projects',
+      icon: <FaHome className="text-3xl" />,
       skills: [
-        { name: 'Programming Languages', level: 90 },
-        { name: 'Web Development', level: 85 },
-        { name: 'Software Architecture', level: 88 },
-        { name: 'API Development', level: 82 }
+        { name: 'Custom Homes', level: 95 },
+        { name: 'Home Additions', level: 90 },
+        { name: 'Outdoor Living', level: 92 },
+        { name: 'Historic Restoration', level: 88 }
       ]
     },
     {
-      category: 'Tools & Technologies',
+      category: 'Commercial Work',
+      icon: <FaBuilding className="text-3xl" />,
+      skills: [
+        { name: 'Office Buildings', level: 93 },
+        { name: 'Retail Spaces', level: 87 },
+        { name: 'Industrial Facilities', level: 91 },
+        { name: 'Public Structures', level: 89 }
+      ]
+    },
+    {
+      category: 'Specialty Masonry',
       icon: <FaTools className="text-3xl" />,
       skills: [
-        { name: 'Version Control (Git)', level: 90 },
-        { name: 'CI/CD Pipelines', level: 80 },
-        { name: 'Docker & Kubernetes', level: 75 },
-        { name: 'Testing Frameworks', level: 85 }
+        { name: 'Stone Work', level: 94 },
+        { name: 'Brick Laying', level: 92 },
+        { name: 'Concrete Design', level: 88 },
+        { name: 'Architectural Features', level: 90 }
       ]
     },
     {
-      category: 'Data & Analytics',
+      category: 'Structural Engineering',
       icon: <FaChartLine className="text-3xl" />,
       skills: [
-        { name: 'Data Analysis', level: 85 },
-        { name: 'SQL & NoSQL', level: 88 },
-        { name: 'Business Intelligence', level: 80 },
-        { name: 'Reporting Tools', level: 82 }
-      ]
-    },
-    {
-      category: 'Soft Skills',
-      icon: <FaPalette className="text-3xl" />,
-      skills: [
-        { name: 'Problem Solving', level: 95 },
-        { name: 'Communication', level: 90 },
-        { name: 'Project Management', level: 85 },
-        { name: 'Leadership', level: 88 }
+        { name: 'Foundation Design', level: 96 },
+        { name: 'Load Analysis', level: 91 },
+        { name: 'Seismic Engineering', level: 89 },
+        { name: 'Building Inspection', level: 93 }
       ]
     }
   ]
 
-  const technologies = [
-    { name: 'Cloud Computing', icon: <FaCloud /> },
-    { name: 'Backend Development', icon: <FaServer /> },
-    { name: 'Mobile Development', icon: <FaMobile /> },
-    { name: 'Database Management', icon: <FaDatabase /> }
+  const featuredProjects = [
+    { name: 'Modern Stone Villa', icon: <FaHome /> },
+    { name: 'Commercial Plaza', icon: <FaBuilding /> },
+    { name: 'Historic Church Restoration', icon: <FaTools /> },
+    { name: 'Bridge Construction', icon: <FaServer /> }
   ]
 
   return (
-    <section id="skills" className="py-20 px-4 bg-slate-900/50" ref={ref}>
+    <section id="projects" className="py-20 px-4 bg-slate-900/50" ref={ref}>
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -78,17 +80,17 @@ export default function Skills() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Skills & Expertise
+            Featured Projects
           </h2>
           <div className="w-24 h-1 bg-primary-500 mx-auto mb-6"></div>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            A comprehensive overview of my technical and professional capabilities
+            Showcase of our finest masonry and structural engineering work
           </p>
         </motion.div>
 
-        {/* Skill Categories */}
+        {/* Project Categories */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {skillCategories.map((category, categoryIndex) => (
+          {projectCategories.map((category, categoryIndex) => (
             <motion.div
               key={categoryIndex}
               initial={{ opacity: 0, y: 50 }}
@@ -123,7 +125,7 @@ export default function Skills() {
           ))}
         </div>
 
-        {/* Technology Highlights */}
+        {/* Featured Projects */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
@@ -131,10 +133,10 @@ export default function Skills() {
           className="bg-gradient-to-r from-primary-600 to-primary-800 rounded-2xl p-8 shadow-2xl"
         >
           <h3 className="text-2xl font-bold text-white mb-8 text-center">
-            Core Competencies
+            Signature Projects
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {technologies.map((tech, index) => (
+            {featuredProjects.map((project, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -143,11 +145,19 @@ export default function Skills() {
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all hover:scale-105"
               >
                 <div className="text-white text-4xl mb-3 flex justify-center">
-                  {tech.icon}
+                  {project.icon}
                 </div>
-                <p className="text-white font-semibold">{tech.name}</p>
+                <p className="text-white font-semibold">{project.name}</p>
               </motion.div>
             ))}
+          </div>
+          <div className="text-center mt-8">
+            <a
+              href="#contact"
+              className="inline-block px-8 py-3 bg-white text-primary-600 rounded-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
+            >
+              View Our Portfolio
+            </a>
           </div>
         </motion.div>
       </div>
