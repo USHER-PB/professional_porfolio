@@ -12,32 +12,32 @@ export default function About() {
   const highlights = [
     {
       icon: <FaBriefcase className="text-3xl" />,
-      title: 'Years of Experience',
-      value: '10+',
-      description: 'Professional experience in the field'
+      title: 'Projects Completed',
+      value: '200+',
+      description: 'Residential and commercial projects'
     },
     {
       icon: <FaAward className="text-3xl" />,
-      title: 'Projects Completed',
-      value: '50+',
-      description: 'Successfully delivered projects'
+      title: 'Years Experience',
+      value: '25+',
+      description: 'In masonry and structural engineering'
     },
     {
       icon: <FaGraduationCap className="text-3xl" />,
       title: 'Certifications',
-      value: '5+',
-      description: 'Professional certifications'
+      value: '8+',
+      description: 'Professional engineering and masonry credentials'
     },
     {
       icon: <FaHeart className="text-3xl" />,
       title: 'Client Satisfaction',
-      value: '100%',
-      description: 'Happy clients and partners'
+      value: '98%',
+      description: 'Happy clients with lasting results'
     }
   ]
 
   return (
-    <section id="about" className="py-20 px-4" ref={ref}>
+    <section id="services" className="py-20 px-4" ref={ref}>
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -46,7 +46,7 @@ export default function About() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            About Me
+            Our Services
           </h2>
           <div className="w-24 h-1 bg-primary-500 mx-auto"></div>
         </motion.div>
@@ -58,16 +58,14 @@ export default function About() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl p-8 shadow-2xl">
-              <h3 className="text-2xl font-bold text-white mb-4">Professional Background</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">Professional Masonry Services</h3>
               <p className="text-gray-100 leading-relaxed mb-4">
-                I am a dedicated professional with extensive experience in [specific field/industry]. 
-                Throughout my career, I have developed a strong expertise in [key skills/areas], 
-                consistently delivering exceptional results and exceeding expectations.
+                We provide comprehensive masonry and structural engineering services for residential and commercial projects. 
+                Our expertise combines traditional craftsmanship with modern engineering principles to deliver exceptional results that stand the test of time.
               </p>
               <p className="text-gray-100 leading-relaxed">
-                My approach combines technical proficiency with creative problem-solving, 
-                allowing me to tackle complex challenges and drive meaningful outcomes. 
-                I am passionate about continuous learning and staying current with industry trends.
+                From custom stone work and brick laying to complete structural design and building construction, 
+                we bring technical precision and artistic vision to every project. Your satisfaction is guaranteed with quality materials and expert workmanship.
               </p>
             </div>
           </motion.div>
@@ -102,30 +100,16 @@ export default function About() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="bg-slate-800 rounded-2xl p-8 shadow-2xl"
         >
-          <h3 className="text-2xl font-bold text-white mb-6">What I Bring to the Table</h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="text-center">
-              <div className="text-4xl mb-3">🎯</div>
-              <h4 className="text-lg font-semibold text-white mb-2">Goal-Oriented</h4>
-              <p className="text-gray-400 text-sm">
-                Focused on achieving objectives and delivering measurable results
+              <h4 className="text-white font-bold text-lg mb-2">Ready to Build Your Dream?</h4>
+              <p className="text-gray-100 text-sm">
+                Get a free consultation and detailed quote for your masonry or structural engineering project.
               </p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-3">🤝</div>
-              <h4 className="text-lg font-semibold text-white mb-2">Team Player</h4>
-              <p className="text-gray-400 text-sm">
-                Excellent collaboration and communication skills
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-3">💡</div>
-              <h4 className="text-lg font-semibold text-white mb-2">Innovative</h4>
-              <p className="text-gray-400 text-sm">
-                Creative problem solver with fresh perspectives
-              </p>
-            </div>
-          </div>
+              <a
+                href="#contact"
+                className="inline-block mt-4 px-6 py-2 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Get a Quote
+              </a>
         </motion.div>
       </div>
     </section>
