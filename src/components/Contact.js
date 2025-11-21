@@ -44,7 +44,7 @@ export default function Contact() {
       const data = await response.json()
 
       if (response.ok) {
-        setStatus({ type: 'success', message: 'Message sent successfully! I will get back to you soon.' })
+        setStatus({ type: 'success', message: 'Quote request sent successfully! We will contact you within 24 hours.' })
         setFormData({ name: '', email: '', subject: '', message: '' })
       } else {
         setStatus({ type: 'error', message: data.error || 'Something went wrong. Please try again.' })
@@ -60,8 +60,8 @@ export default function Contact() {
     {
       icon: <FaEnvelope className="text-2xl" />,
       title: 'Email',
-      value: 'uncle@example.com',
-      link: 'mailto:uncle@example.com'
+      value: 'uncle@masonry.com',
+      link: 'mailto:uncle@masonry.com'
     },
     {
       icon: <FaPhone className="text-2xl" />,
@@ -71,14 +71,14 @@ export default function Contact() {
     },
     {
       icon: <FaMapMarkerAlt className="text-2xl" />,
-      title: 'Location',
-      value: 'City, Country',
+      title: 'Service Area',
+      value: 'Greater Metropolitan Region',
       link: null
     },
     {
       icon: <FaLinkedin className="text-2xl" />,
       title: 'LinkedIn',
-      value: 'linkedin.com/in/profile',
+      value: 'linkedin.com/in/uncle-masonry',
       link: 'https://linkedin.com'
     }
   ]
@@ -93,11 +93,11 @@ export default function Contact() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Get In Touch
+            Get a Quote
           </h2>
           <div className="w-24 h-1 bg-primary-500 mx-auto mb-6"></div>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Interested in working together? Let&apos;s discuss how I can contribute to your team&apos;s success.
+            Ready to start your next construction project? Contact us for a free consultation and detailed quote for your masonry or structural engineering needs.
           </p>
         </motion.div>
 
@@ -110,8 +110,8 @@ export default function Contact() {
           >
             <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
             <p className="text-gray-400 mb-8 leading-relaxed">
-              Feel free to reach out through any of the following channels. 
-              I&apos;m always open to discussing new opportunities, projects, or collaborations.
+              Reach out to discuss your project requirements. 
+              We offer free consultations and detailed quotes for all masonry and structural engineering services.
             </p>
 
             <div className="space-y-6">
@@ -149,9 +149,9 @@ export default function Contact() {
               transition={{ duration: 0.8, delay: 0.8 }}
               className="mt-8 bg-gradient-to-r from-primary-600 to-primary-800 rounded-xl p-6"
             >
-              <h4 className="text-white font-bold text-lg mb-2">Available for Opportunities</h4>
+              <h4 className="text-white font-bold text-lg mb-2">Available for Projects</h4>
               <p className="text-gray-100 text-sm">
-                Currently seeking new challenges and opportunities to contribute my expertise and drive success.
+                Currently accepting new residential and commercial projects. Licensed, insured, and ready to build.
               </p>
             </motion.div>
           </motion.div>
@@ -207,7 +207,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-slate-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all"
-                  placeholder="Job Opportunity"
+                  placeholder="Project Inquiry"
                 />
               </div>
 
@@ -223,7 +223,7 @@ export default function Contact() {
                   required
                   rows="5"
                   className="w-full px-4 py-3 bg-slate-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all resize-none"
-                  placeholder="Tell me about the opportunity..."
+                  placeholder="Tell us about your project..."
                 ></textarea>
               </div>
 
@@ -252,7 +252,7 @@ export default function Contact() {
                 ) : (
                   <>
                     <FaPaperPlane />
-                    Send Message
+                    Get Quote
                   </>
                 )}
               </button>
