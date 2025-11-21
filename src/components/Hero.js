@@ -19,7 +19,7 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="w-40 h-40 mx-auto mb-8 rounded-full bg-gradient-to-r from-primary-400 to-primary-600 flex items-center justify-center text-6xl font-bold text-white shadow-2xl"
           >
-            UN
+            ME
           </motion.div>
 
           <motion.h1
@@ -28,7 +28,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-5xl md:text-7xl font-bold text-white mb-4"
           >
-           Kamga Aritide Professional portfolio
+           Building Strong Foundations
           </motion.h1>
 
           <motion.p
@@ -37,7 +37,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-2xl md:text-3xl text-primary-400 mb-6"
           >
-            Professional Title / Specialization
+            Crafting Lasting Beauty
           </motion.p>
 
           <motion.p
@@ -46,9 +46,9 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8"
           >
-            Experienced professional with expertise in [field/industry]. 
-            Passionate about delivering high-quality results and driving success.
-            Available for new opportunities.
+            Professional mason and structural engineer with decades of experience in quality construction. 
+            From custom stonework to complete building design, we bring technical expertise and artistic craftsmanship to every project.
+            Your vision, built to last.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -59,16 +59,16 @@ export default function Hero() {
             className="flex flex-wrap justify-center gap-4 mb-12"
           >
             <a
-              href="#contact"
+              href="#services"
               className="px-8 py-3 bg-primary-500 hover:bg-primary-600 text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
             >
-              Get In Touch
+              Our Services
             </a>
             <a
-              href="#experience"
+              href="#contact"
               className="px-8 py-3 bg-slate-700 hover:bg-slate-600 text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
             >
-              View Experience
+              Get a Quote
             </a>
           </motion.div>
 
@@ -96,7 +96,7 @@ export default function Hero() {
               <FaGithub size={32} />
             </a>
             <a
-              href="mailto:uncle@example.com"
+              href="mailto:uncle@masonry.com"
               className="text-gray-400 hover:text-primary-400 transform hover:scale-110 transition-all"
             >
               <FaEnvelope size={32} />
