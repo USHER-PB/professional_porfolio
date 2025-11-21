@@ -1,7 +1,7 @@
 {
-  "name": "portfolio-website",
+  "name": "masonry-engineering-website",
   "version": "1.0.0",
-  "description": "Professional portfolio website for job opportunities",
+  "description": "Professional masonry and structural engineering services - showcasing quality construction, craftsmanship, and building design expertise",
   "private": true,
   "scripts": {
     "dev": "next dev",
