@@ -87,79 +87,70 @@ export default function About() {
         >
           <h3 className="text-2xl font-bold text-white mb-6">Mes Prestations</h3>
           
-          <div className="mb-8">
-            <h4 className="text-xl font-semibold text-primary-400 mb-4">🏗️ Au Pays</h4>
-            <div className="grid md:grid-cols-2 gap-4">
-              <div className="flex items-start gap-3">
-                <span className="text-primary-400 mt-1">•</span>
-                <div>
-                  <h5 className="text-white font-semibold">Conception Architecturale</h5>
-                </div>
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="flex items-start gap-3">
+              <span className="text-primary-400 mt-1">•</span>
+              <div>
+                <h5 className="text-white font-semibold">Conception Architecturale</h5>
               </div>
-              <div className="flex items-start gap-3">
-                <span className="text-primary-400 mt-1">•</span>
-                <div>
-                  <h5 className="text-white font-semibold">Calcul des Charges</h5>
-                </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <span className="text-primary-400 mt-1">•</span>
+              <div>
+                <h5 className="text-white font-semibold">Calcul des Charges</h5>
               </div>
-              <div className="flex items-start gap-3">
-                <span className="text-primary-400 mt-1">•</span>
-                <div>
-                  <h5 className="text-white font-semibold">Différents Devis</h5>
-                </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <span className="text-primary-400 mt-1">•</span>
+              <div>
+                <h5 className="text-white font-semibold">Différents Devis</h5>
               </div>
-              <div className="flex items-start gap-3">
-                <span className="text-primary-400 mt-1">•</span>
-                <div>
-                  <h5 className="text-white font-semibold">Réalisation Clé en Main</h5>
-                </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <span className="text-primary-400 mt-1">•</span>
+              <div>
+                <h5 className="text-white font-semibold">Réalisation Clé en Main</h5>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <span className="text-primary-400 mt-1">•</span>
+              <div>
+                <h5 className="text-white font-semibold">Rénovation Construction</h5>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <span className="text-primary-400 mt-1">•</span>
+              <div>
+                <h5 className="text-white font-semibold">Déneigement</h5>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <span className="text-primary-400 mt-1">•</span>
+              <div>
+                <h5 className="text-white font-semibold">Réalisation Pavés</h5>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <span className="text-primary-400 mt-1">•</span>
+              <div>
+                <h5 className="text-white font-semibold">Achat Montage Pneus</h5>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <span className="text-primary-400 mt-1">•</span>
+              <div>
+                <h5 className="text-white font-semibold">Déménagement</h5>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <span className="text-primary-400 mt-1">•</span>
+              <div>
+                <h5 className="text-white font-semibold">Assistance Domicile</h5>
               </div>
             </div>
           </div>
 
-          <div className="mb-8">
-            <h4 className="text-xl font-semibold text-primary-400 mb-4">🇨🇦 Au Canada</h4>
-            <div className="grid md:grid-cols-2 gap-4">
-              <div className="flex items-start gap-3">
-                <span className="text-primary-400 mt-1">•</span>
-                <div>
-                  <h5 className="text-white font-semibold">Rénovation Construction</h5>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="text-primary-400 mt-1">•</span>
-                <div>
-                  <h5 className="text-white font-semibold">Déneigement</h5>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="text-primary-400 mt-1">•</span>
-                <div>
-                  <h5 className="text-white font-semibold">Réalisation Pavés</h5>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="text-primary-400 mt-1">•</span>
-                <div>
-                  <h5 className="text-white font-semibold">Achat Montage Pneus</h5>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="text-primary-400 mt-1">•</span>
-                <div>
-                  <h5 className="text-white font-semibold">Déménagement</h5>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="text-primary-400 mt-1">•</span>
-                <div>
-                  <h5 className="text-white font-semibold">Assistance Domicile</h5>
-                </div>
-              </div>
-            </div>
-          </div>
-
-              <h4 className="text-white font-bold text-lg mb-2">Prêt à Commencer?</h4>
+              <h4 className="text-white font-bold text-lg mb-2 mt-8">Prêt à Commencer?</h4>
               <p className="text-gray-100 text-sm">
                 Contactez-moi pour vos projets de construction et ingénierie.
               </p>
