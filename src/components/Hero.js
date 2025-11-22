@@ -28,7 +28,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-5xl md:text-7xl font-bold text-white mb-4"
           >
-           Building Strong Foundations
+           DJOMO KAMGA ARISTIDE
           </motion.h1>
 
           <motion.p
@@ -37,7 +37,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-2xl md:text-3xl text-primary-400 mb-6"
           >
-            Crafting Lasting Beauty
+            Ingénieur Civil & Construction Bâtiment
           </motion.p>
 
           <motion.p
@@ -46,9 +46,9 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8"
           >
-            Professional mason and structural engineer with decades of experience in quality construction. 
-            From custom stonework to complete building design, we bring technical expertise and artistic craftsmanship to every project.
-            Your vision, built to last.
+            Ingénieur civil option bâtiment. 
+            Conception architecturale, calcul des charges, devis et réalisation clé en main.
+            Services divers au Canada: rénovation, déneigement, pavés, pneus, déménagement, assistance domicile.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -62,13 +62,13 @@ export default function Hero() {
               href="#services"
               className="px-8 py-3 bg-primary-500 hover:bg-primary-600 text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
             >
-              Our Services
+              Nos Services
             </a>
             <a
               href="#contact"
               className="px-8 py-3 bg-slate-700 hover:bg-slate-600 text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
             >
-              Get a Quote
+              Obtenir un Devis
             </a>
           </motion.div>
 

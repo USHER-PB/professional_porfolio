@@ -44,7 +44,7 @@ export default function Contact() {
       const data = await response.json()
 
       if (response.ok) {
-        setStatus({ type: 'success', message: 'Quote request sent successfully! We will contact you within 24 hours.' })
+        setStatus({ type: 'success', message: 'Devis envoyé avec succès! Nous vous contacterons dans 24 heures.' })
         setFormData({ name: '', email: '', subject: '', message: '' })
       } else {
         setStatus({ type: 'error', message: data.error || 'Something went wrong. Please try again.' })
@@ -60,8 +60,8 @@ export default function Contact() {
     {
       icon: <FaEnvelope className="text-2xl" />,
       title: 'Email',
-      value: 'uncle@masonry.com',
-      link: 'mailto:uncle@masonry.com'
+      value: 'djomo.kamga.aristide@email.com',
+      link: 'mailto:djomo.kamga.aristide@email.com'
     },
     {
       icon: <FaPhone className="text-2xl" />,
@@ -71,14 +71,14 @@ export default function Contact() {
     },
     {
       icon: <FaMapMarkerAlt className="text-2xl" />,
-      title: 'Service Area',
-      value: 'Greater Metropolitan Region',
+      title: 'Service Areas',
+      value: 'Local & Canada Operations',
       link: null
     },
     {
       icon: <FaLinkedin className="text-2xl" />,
       title: 'LinkedIn',
-      value: 'linkedin.com/in/uncle-masonry',
+      value: 'linkedin.com/in/djomo-kamga-aristide',
       link: 'https://linkedin.com'
     }
   ]
@@ -93,11 +93,11 @@ export default function Contact() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Get a Quote
+            Obtenir un Devis
           </h2>
           <div className="w-24 h-1 bg-primary-500 mx-auto mb-6"></div>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Ready to start your next construction project? Contact us for a free consultation and detailed quote for your masonry or structural engineering needs.
+            Prêt à commencer votre projet de construction? Contactez DJOMO KAMGA ARISTIDE pour services d'ingénierie professionnels, conception architecturale et tous vos besoins de construction.
           </p>
         </motion.div>
 
@@ -108,10 +108,10 @@ export default function Contact() {
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
+            <h3 className="text-2xl font-bold text-white mb-6">Informations de Contact</h3>
             <p className="text-gray-400 mb-8 leading-relaxed">
-              Reach out to discuss your project requirements. 
-              We offer free consultations and detailed quotes for all masonry and structural engineering services.
+              Contactez DJOMO KAMGA ARISTIDE pour services d'ingénierie professionnels. 
+              Nous offrons consultations gratuites pour conception architecturale, calculs structurels et tous services de construction.
             </p>
 
             <div className="space-y-6">
@@ -149,9 +149,9 @@ export default function Contact() {
               transition={{ duration: 0.8, delay: 0.8 }}
               className="mt-8 bg-gradient-to-r from-primary-600 to-primary-800 rounded-xl p-6"
             >
-              <h4 className="text-white font-bold text-lg mb-2">Available for Projects</h4>
+              <h4 className="text-white font-bold text-lg mb-2">Disponible pour Projets</h4>
               <p className="text-gray-100 text-sm">
-                Currently accepting new residential and commercial projects. Licensed, insured, and ready to build.
+                DJOMO KAMGA ARISTIDE accepte actuellement nouveaux projets d'ingénierie et construction. Services professionnels disponibles localement et au Canada.
               </p>
             </motion.div>
           </motion.div>
@@ -207,7 +207,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-slate-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all"
-                  placeholder="Project Inquiry"
+                  placeholder="Demande de Projet"
                 />
               </div>
 
@@ -223,7 +223,7 @@ export default function Contact() {
                   required
                   rows="5"
                   className="w-full px-4 py-3 bg-slate-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all resize-none"
-                  placeholder="Tell us about your project..."
+                  placeholder="Parlez-nous de votre projet..."
                 ></textarea>
               </div>
 
@@ -252,7 +252,7 @@ export default function Contact() {
                 ) : (
                   <>
                     <FaPaperPlane />
-                    Get Quote
+                    Obtenir un Devis
                   </>
                 )}
               </button>

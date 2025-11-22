@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: argocd-agent-params
+  namespace: argocd
+data:
+  principal.listen.host: "0.0.0.0"
+  principal.listen.port: "8443"
+  principal.tls.secret-name: "argocd-agent-principal-tls"
+  principal.tls.server.root-ca-secret-name: "argocd-agent-ca"
+  principal.auth: "mtls:CN=([^,]+)"
+  principal.tls.client-cert.require: "true"

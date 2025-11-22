@@ -16,10 +16,9 @@ export default function Navbar() {
   }, [])
 
   const navItems = [
-    { name: 'Home', href: '#home' },
+    { name: 'Accueil', href: '#home' },
     { name: 'Services', href: '#services' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'About', href: '#about' },
+    { name: 'À Propos', href: '#about' },
     { name: 'Contact', href: '#contact' },
   ]
 
@@ -33,7 +32,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <a href="#home" className="text-2xl font-bold text-white">
-              <span className="text-primary-400">MasonryPro</span>
+              <span className="text-primary-400">DJOMO KAMGA</span>
             </a>
           </div>
 

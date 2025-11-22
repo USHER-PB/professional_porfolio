@@ -11,61 +11,25 @@ export default function Experience() {
 
   const qualifications = [
     {
-      title: 'Professional Engineering License',
-      issuer: 'State Board of Engineers',
-      location: 'Licensed Professional Engineer',
-      period: '1998 - Present',
-      description: 'Fully licensed structural engineer with expertise in building design and construction management.',
+      title: 'Ingénieur Civil',
+      issuer: 'Option Bâtiment',
+      location: 'Diplômé',
+      period: 'Formation Complète',
+      description: 'Ingénieur civil avec spécialisation en construction bâtiment.',
       achievements: [
-        'Licensed in multiple states',
-        'Specialized in masonry structures',
-        '25+ years of professional practice',
-        'Continuously updated with latest codes'
-      ]
-    },
-    {
-      title: 'Masonry Master Certification',
-      issuer: 'Masonry Institute of America',
-      location: 'Master Mason Certification',
-      period: '2005 - Present',
-      description: 'Advanced certification in traditional and modern masonry techniques, stone work, and brick laying.',
-      achievements: [
-        'Certified Master Mason',
-        'Specialized in historic restoration',
-        'Expert in custom stone work',
-        'Trained over 50 apprentices'
-      ]
-    },
-    {
-      title: 'Construction Management',
-      client: 'Major Construction Firms',
-      location: 'Project Management',
-      period: '2000 - Present',
-      description: 'Extensive experience managing large-scale residential and commercial construction projects from conception to completion.',
-      achievements: [
-        'Managed 200+ construction projects',
-        'Consistently under budget and on time',
-        'Zero safety incidents record',
-        'Excellent client satisfaction ratings'
+        'Conception architecturale',
+        'Calcul des charges',
+        'Différents devis',
+        'Réalisation clé en main'
       ]
     }
   ]
 
   const education = [
     {
-      name: 'Bachelor of Science - Civil Engineering',
-      issuer: 'University of Engineering',
-      year: '1995'
-    },
-    {
-      name: 'Structural Engineering Masters',
-      issuer: 'Institute of Technology',
-      year: '1997'
-    },
-    {
-      name: 'Masonry Arts & Crafts Certification',
-      issuer: 'Traditional Building Guild',
-      year: '2000'
+      name: 'Ingénieur Civil',
+      issuer: 'Option Bâtiment',
+      year: 'Diplômé'
     }
   ]
 
@@ -79,11 +43,11 @@ export default function Experience() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            About Me
+            À Propos
           </h2>
           <div className="w-24 h-1 bg-primary-500 mx-auto mb-6"></div>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Professional mason and structural engineer with decades of quality construction experience
+            Ingénieur civil et maçon professionnel avec des décennies d'expérience en construction de qualité
           </p>
         </motion.div>
 
@@ -152,7 +116,7 @@ export default function Experience() {
           className="mt-16"
         >
           <h3 className="text-3xl font-bold text-white mb-8 text-center">
-            Education & Training
+            Formation & Éducation
           </h3>
           <div className="grid md:grid-cols-3 gap-6">
             {education.map((edu, index) => (
@@ -175,7 +139,7 @@ export default function Experience() {
               href="#contact"
               className="inline-block px-8 py-3 bg-white text-primary-600 rounded-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
             >
-              Discuss Your Project
+              Discuter Votre Projet
             </a>
           </div>
         </motion.div>

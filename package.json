@@ -1,7 +1,7 @@
 {
-  "name": "masonry-engineering-website",
+  "name": "djomo-kamga-aristide-engineering",
   "version": "1.0.0",
-  "description": "Professional masonry and structural engineering services - showcasing quality construction, craftsmanship, and building design expertise",
+  "description": "DJOMO KAMGA ARISTIDE - Professional civil engineering and construction services including architectural design, structural calculations, cost estimates, turnkey projects, and comprehensive renovation services",
   "private": true,
   "scripts": {
     "dev": "next dev",

@@ -22,52 +22,52 @@ export default function Skills() {
 
   const projectCategories = [
     {
-      category: 'Residential Projects',
+      category: 'Projets Résidentiels',
       icon: <FaHome className="text-3xl" />,
       skills: [
-        { name: 'Custom Homes', level: 95 },
-        { name: 'Home Additions', level: 90 },
-        { name: 'Outdoor Living', level: 92 },
-        { name: 'Historic Restoration', level: 88 }
+        { name: 'Maisons Personnalisées', level: 95 },
+        { name: 'Extensions Domicile', level: 90 },
+        { name: 'Espaces Extérieurs', level: 92 },
+        { name: 'Restauration Historique', level: 88 }
       ]
     },
     {
-      category: 'Commercial Work',
+      category: 'Travaux Commerciaux',
       icon: <FaBuilding className="text-3xl" />,
       skills: [
-        { name: 'Office Buildings', level: 93 },
-        { name: 'Retail Spaces', level: 87 },
-        { name: 'Industrial Facilities', level: 91 },
-        { name: 'Public Structures', level: 89 }
+        { name: 'Bureaux', level: 93 },
+        { name: 'Espaces Commerciaux', level: 87 },
+        { name: 'Installations Industrielles', level: 91 },
+        { name: 'Structures Publiques', level: 89 }
       ]
     },
     {
-      category: 'Specialty Masonry',
+      category: 'Maçonnerie Spécialisée',
       icon: <FaTools className="text-3xl" />,
       skills: [
-        { name: 'Stone Work', level: 94 },
-        { name: 'Brick Laying', level: 92 },
-        { name: 'Concrete Design', level: 88 },
-        { name: 'Architectural Features', level: 90 }
+        { name: 'Travail Pierre', level: 94 },
+        { name: 'Maçonnerie Briques', level: 92 },
+        { name: 'Design Béton', level: 88 },
+        { name: 'Éléments Architecturaux', level: 90 }
       ]
     },
     {
-      category: 'Structural Engineering',
+      category: 'Ingénierie Structurelle',
       icon: <FaChartLine className="text-3xl" />,
       skills: [
-        { name: 'Foundation Design', level: 96 },
-        { name: 'Load Analysis', level: 91 },
-        { name: 'Seismic Engineering', level: 89 },
-        { name: 'Building Inspection', level: 93 }
+        { name: 'Conception Fondations', level: 96 },
+        { name: 'Analyse Charges', level: 91 },
+        { name: 'Ingénierie Sismique', level: 89 },
+        { name: 'Inspection Bâtiments', level: 93 }
       ]
     }
   ]
 
   const featuredProjects = [
-    { name: 'Modern Stone Villa', icon: <FaHome /> },
-    { name: 'Commercial Plaza', icon: <FaBuilding /> },
-    { name: 'Historic Church Restoration', icon: <FaTools /> },
-    { name: 'Bridge Construction', icon: <FaServer /> }
+    { name: 'Villa Pierre Moderne', icon: <FaHome /> },
+    { name: 'Centre Commercial', icon: <FaBuilding /> },
+    { name: 'Restauration Église Historique', icon: <FaTools /> },
+    { name: 'Construction Pont', icon: <FaServer /> }
   ]
 
   return (
@@ -80,11 +80,11 @@ export default function Skills() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Featured Projects
+            Nos Projets
           </h2>
           <div className="w-24 h-1 bg-primary-500 mx-auto mb-6"></div>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Showcase of our finest masonry and structural engineering work
+            Découvrez notre portfolio de réalisations en ingénierie et construction
           </p>
         </motion.div>
 
@@ -156,7 +156,7 @@ export default function Skills() {
               href="#contact"
               className="inline-block px-8 py-3 bg-white text-primary-600 rounded-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
             >
-              View Our Portfolio
+              Voir Notre Portfolio
             </a>
           </div>
         </motion.div>
