@@ -46,7 +46,7 @@ export default function About() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl p-8 shadow-2xl">
-              <h3 className="text-2xl font-bold text-white mb-4">Services Professionnels d&apos;Ingénierie</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">Services professionnels d&apos;ingénierie</h3>
               <p className="text-gray-100 leading-relaxed mb-4">
                 DJOMO KAMGA ARISTIDE - Ingénieur civil spécialisé en construction bâtiment. 
                 Nous fournissons des services complets d&apos;ingénierie et de construction pour projets résidentiels et commerciaux, 
@@ -85,37 +85,37 @@ export default function About() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="bg-slate-800 rounded-2xl p-8 shadow-2xl"
         >
-          <h3 className="text-2xl font-bold text-white mb-6">Mes Prestations</h3>
+          <h3 className="text-2xl font-bold text-white mb-6">Mes prestations</h3>
           
           <div className="grid md:grid-cols-2 gap-4">
             <div className="flex items-start gap-3">
               <span className="text-primary-400 mt-1">•</span>
               <div>
-                <h5 className="text-white font-semibold">Conception Architecturale</h5>
+                <h5 className="text-white font-semibold">Conception architecturale</h5>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <span className="text-primary-400 mt-1">•</span>
               <div>
-                <h5 className="text-white font-semibold">Calcul des Charges</h5>
+                <h5 className="text-white font-semibold">Calcul des charges</h5>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <span className="text-primary-400 mt-1">•</span>
               <div>
-                <h5 className="text-white font-semibold">Différents Devis</h5>
+                <h5 className="text-white font-semibold">Différents devis</h5>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <span className="text-primary-400 mt-1">•</span>
               <div>
-                <h5 className="text-white font-semibold">Réalisation Clé en Main</h5>
+                <h5 className="text-white font-semibold">Réalisation clé en main</h5>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <span className="text-primary-400 mt-1">•</span>
               <div>
-                <h5 className="text-white font-semibold">Rénovation Construction</h5>
+                <h5 className="text-white font-semibold">Rénovation construction</h5>
               </div>
             </div>
             <div className="flex items-start gap-3">
@@ -127,13 +127,13 @@ export default function About() {
             <div className="flex items-start gap-3">
               <span className="text-primary-400 mt-1">•</span>
               <div>
-                <h5 className="text-white font-semibold">Réalisation Pavés</h5>
+                <h5 className="text-white font-semibold">Réalisation pavés</h5>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <span className="text-primary-400 mt-1">•</span>
               <div>
-                <h5 className="text-white font-semibold">Achat Montage Pneus</h5>
+                <h5 className="text-white font-semibold">Achat montage pneus</h5>
               </div>
             </div>
             <div className="flex items-start gap-3">
@@ -145,12 +145,12 @@ export default function About() {
             <div className="flex items-start gap-3">
               <span className="text-primary-400 mt-1">•</span>
               <div>
-                <h5 className="text-white font-semibold">Assistance Domicile</h5>
+                <h5 className="text-white font-semibold">Assistance domicile</h5>
               </div>
             </div>
           </div>
 
-              <h4 className="text-white font-bold text-lg mb-2 mt-8">Prêt à Commencer?</h4>
+              <h4 className="text-white font-bold text-lg mb-2 mt-8">Prêt à commencer ?</h4>
               <p className="text-gray-100 text-sm">
                 Contactez-moi pour vos projets de construction et ingénierie.
               </p>
@@ -158,7 +158,7 @@ export default function About() {
                 href="#contact"
                 className="inline-block mt-4 px-6 py-2 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                Obtenir un Devis
+                Obtenir un devis
               </a>
         </motion.div>
       </div>

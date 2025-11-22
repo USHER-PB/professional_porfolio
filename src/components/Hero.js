@@ -48,7 +48,7 @@ export default function Hero() {
           >
             Ingénieur civil option bâtiment. 
             Conception architecturale, calcul des charges, devis et réalisation clé en main.
-            Services divers au Canada: rénovation, déneigement, pavés, pneus, déménagement, assistance domicile.
+            Services divers au Canada : rénovation, déneigement, pavés, pneus, déménagement, assistance domicile.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -62,13 +62,13 @@ export default function Hero() {
               href="#services"
               className="px-8 py-3 bg-primary-500 hover:bg-primary-600 text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
             >
-              Nos Services
+              Nos services
             </a>
             <a
               href="#contact"
               className="px-8 py-3 bg-slate-700 hover:bg-slate-600 text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
             >
-              Obtenir un Devis
+              Obtenir un devis
             </a>
           </motion.div>
 

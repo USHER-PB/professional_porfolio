@@ -43,7 +43,7 @@ export default function Experience() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            À Propos
+            À propos
           </h2>
           <div className="w-24 h-1 bg-primary-500 mx-auto mb-6"></div>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
@@ -116,7 +116,7 @@ export default function Experience() {
           className="mt-16"
         >
           <h3 className="text-3xl font-bold text-white mb-8 text-center">
-            Formation & Éducation
+            Formation & éducation
           </h3>
           <div className="grid md:grid-cols-3 gap-6">
             {education.map((edu, index) => (
@@ -139,7 +139,7 @@ export default function Experience() {
               href="#contact"
               className="inline-block px-8 py-3 bg-white text-primary-600 rounded-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
             >
-              Discuter Votre Projet
+              Discuter votre projet
             </a>
           </div>
         </motion.div>

@@ -93,7 +93,7 @@ export default function Contact() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Obtenir un Devis
+            Obtenir un devis
           </h2>
           <div className="w-24 h-1 bg-primary-500 mx-auto mb-6"></div>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
@@ -108,7 +108,7 @@ export default function Contact() {
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h3 className="text-2xl font-bold text-white mb-6">Informations de Contact</h3>
+            <h3 className="text-2xl font-bold text-white mb-6">Informations de contact</h3>
             <p className="text-gray-400 mb-8 leading-relaxed">
               Contactez DJOMO KAMGA ARISTIDE pour services d&apos;ingénierie professionnels. 
               Nous offrons consultations gratuites pour conception architecturale, calculs structurels et tous services de construction.
@@ -163,9 +163,10 @@ export default function Contact() {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <form onSubmit={handleSubmit} className="bg-slate-800 rounded-xl p-8 shadow-xl">
+              <h3 className="text-2xl font-bold text-white mb-6">Formulaire de contact</h3>
               <div className="mb-6">
                 <label htmlFor="name" className="block text-white font-medium mb-2">
-                  Your Name *
+                  Votre nom *
                 </label>
                 <input
                   type="text"
@@ -175,13 +176,13 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-slate-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all"
-                  placeholder="John Doe"
+                  placeholder="Jean Dupont"
                 />
               </div>
 
               <div className="mb-6">
                 <label htmlFor="email" className="block text-white font-medium mb-2">
-                  Your Email *
+                  Votre email *
                 </label>
                 <input
                   type="email"
@@ -191,13 +192,13 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-slate-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all"
-                  placeholder="john@example.com"
+                  placeholder="jean@exemple.com"
                 />
               </div>
 
               <div className="mb-6">
                 <label htmlFor="subject" className="block text-white font-medium mb-2">
-                  Subject *
+                  Sujet *
                 </label>
                 <input
                   type="text"
@@ -207,7 +208,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-slate-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all"
-                  placeholder="Demande de Projet"
+                  placeholder="Demande de projet"
                 />
               </div>
 
@@ -247,12 +248,12 @@ export default function Contact() {
                 {isSubmitting ? (
                   <>
                     <span className="animate-spin">⏳</span>
-                    Sending...
+                    Envoi en cours...
                   </>
                 ) : (
                   <>
                     <FaPaperPlane />
-                    Obtenir un Devis
+                    Obtenir un devis
                   </>
                 )}
               </button>
