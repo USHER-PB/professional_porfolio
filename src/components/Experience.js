@@ -47,7 +47,7 @@ export default function Experience() {
           </h2>
           <div className="w-24 h-1 bg-primary-500 mx-auto mb-6"></div>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Ingénieur civil et maçon professionnel avec des décennies d'expérience en construction de qualité
+            Ingénieur civil et maçon professionnel avec des décennies d&apos;expérience en construction de qualité
           </p>
         </motion.div>
 

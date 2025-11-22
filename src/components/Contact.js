@@ -97,7 +97,7 @@ export default function Contact() {
           </h2>
           <div className="w-24 h-1 bg-primary-500 mx-auto mb-6"></div>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Prêt à commencer votre projet de construction? Contactez DJOMO KAMGA ARISTIDE pour services d'ingénierie professionnels, conception architecturale et tous vos besoins de construction.
+            Prêt à commencer votre projet de construction? Contactez DJOMO KAMGA ARISTIDE pour services d&apos;ingénierie professionnels, conception architecturale et tous vos besoins de construction.
           </p>
         </motion.div>
 
@@ -110,7 +110,7 @@ export default function Contact() {
           >
             <h3 className="text-2xl font-bold text-white mb-6">Informations de Contact</h3>
             <p className="text-gray-400 mb-8 leading-relaxed">
-              Contactez DJOMO KAMGA ARISTIDE pour services d'ingénierie professionnels. 
+              Contactez DJOMO KAMGA ARISTIDE pour services d&apos;ingénierie professionnels. 
               Nous offrons consultations gratuites pour conception architecturale, calculs structurels et tous services de construction.
             </p>
 
@@ -151,7 +151,7 @@ export default function Contact() {
             >
               <h4 className="text-white font-bold text-lg mb-2">Disponible pour Projets</h4>
               <p className="text-gray-100 text-sm">
-                DJOMO KAMGA ARISTIDE accepte actuellement nouveaux projets d'ingénierie et construction. Services professionnels disponibles localement et au Canada.
+                DJOMO KAMGA ARISTIDE accepte actuellement nouveaux projets d&apos;ingénierie et construction. Services professionnels disponibles localement et au Canada.
               </p>
             </motion.div>
           </motion.div>

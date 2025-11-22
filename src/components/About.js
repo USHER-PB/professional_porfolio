@@ -18,9 +18,9 @@ export default function About() {
     },
     {
       icon: <FaGraduationCap className="text-3xl" />,
-      title: 'Ingénieur Civil',
+      title: 'Années d\'Expérience',
       value: 'Diplômé',
-      description: 'Spécialisation construction bâtiment'
+      description: 'En ingénierie et construction'
     }
   ]
 
@@ -49,8 +49,8 @@ export default function About() {
               <h3 className="text-2xl font-bold text-white mb-4">Services Professionnels d'Ingénierie</h3>
               <p className="text-gray-100 leading-relaxed mb-4">
                 DJOMO KAMGA ARISTIDE - Ingénieur civil spécialisé en construction bâtiment. 
-                Nous fournissons des services complets d'ingénierie et de construction pour projets résidentiels et commerciaux, 
-                combinant expertise technique et qualité d'artisanat.
+                Nous fournissons des services complets d&apos;ingénierie et de construction pour projets résidentiels et commerciaux, 
+                combinant expertise technique et qualité d&apos;artisanat.
               </p>
               <p className="text-gray-100 leading-relaxed">
                 De la conception architecturale aux calculs structurels et projets clés en main, 
