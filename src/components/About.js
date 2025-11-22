@@ -46,7 +46,7 @@ export default function About() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl p-8 shadow-2xl">
-              <h3 className="text-2xl font-bold text-white mb-4">Services Professionnels d'Ingénierie</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">Services Professionnels d&apos;Ingénierie</h3>
               <p className="text-gray-100 leading-relaxed mb-4">
                 DJOMO KAMGA ARISTIDE - Ingénieur civil spécialisé en construction bâtiment. 
                 Nous fournissons des services complets d&apos;ingénierie et de construction pour projets résidentiels et commerciaux, 
