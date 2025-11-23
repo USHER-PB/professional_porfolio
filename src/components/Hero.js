@@ -109,20 +109,20 @@ export default function Hero() {
             className="flex flex-wrap justify-center gap-8 text-gray-300"
           >
             <a
-              href="mailto:fakbru@yahoo.com"
+              href="mailto:ushertchankoumi9@gmail.com"
               className="flex items-center gap-3 hover:text-amber-500 transition-colors"
             >
               <FaEnvelope className="text-2xl" />
-              <span>fakbru@yahoo.com</span>
+              <span>ushertchankoumi9@gmail.com</span>
             </a>
             <a
-              href="https://wa.me/237694338988"
+              href="https://wa.me/237690290961"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 hover:text-amber-500 transition-colors"
             >
               <FaWhatsapp className="text-2xl" />
-              <span>+237 694 338 988</span>
+              <span>+237 690 290 961</span>
             </a>
           </motion.div>
         </motion.div>

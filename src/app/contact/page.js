@@ -33,20 +33,20 @@ export default function Contact() {
     {
       icon: <FaEnvelope className="text-2xl" />,
       title: "Email",
-      value: "fakbru@yahoo.com",
-      link: "mailto:fakbru@yahoo.com"
+      value: "ushertchankoumi9@gmail.com",
+      link: "mailto:ushertchankoumi9@gmail.com"
     },
     {
       icon: <FaWhatsapp className="text-2xl" />,
       title: "WhatsApp",
-      value: "+237 694 338 988",
-      link: "https://wa.me/237694338988"
+      value: "+237 690 290 961",
+      link: "https://wa.me/237690290961"
     },
     {
       icon: <FaPhone className="text-2xl" />,
       title: "Téléphone",
-      value: "+237 694 338 988",
-      link: "tel:+237694338988"
+      value: "+237 690 290 961",
+      link: "tel:+237690290961"
     },
     {
       icon: <FaMapMarkerAlt className="text-2xl" />,
