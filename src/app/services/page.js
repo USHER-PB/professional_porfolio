@@ -10,37 +10,43 @@ export default function Services() {
       icon: <FaDraftingCompass className="text-4xl" />,
       title: "Conception Architecturale",
       description: "Plans détaillés, conception 3D, permis de construction, études de faisabilité",
-      image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+      image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      href: "/services/conception-architecturale"
     },
     {
       icon: <FaRulerCombined className="text-4xl" />,
       title: "Calcul des Structures",
       description: "Analyse structurelle, dimensionnement, béton armé, charpente métallique",
-      image: "https://images.unsplash.com/photo-1541888941229-c2b07e8e8da9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+      image: "https://images.unsplash.com/photo-1541888941229-c2b07e8e8da9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      href: "/services/calcul-structures"
     },
     {
       icon: <FaHammer className="text-4xl" />,
       title: "Construction Clé en Main",
       description: "Gestion complète de projet, coordination des corps de métier, livraison",
-      image: "https://images.unsplash.com/photo-1518547916183-28d83bf51ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+      image: "https://images.unsplash.com/photo-1518547916183-28d83bf51ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      href: "/services/construction-cle-main"
     },
     {
       icon: <FaPaintRoller className="text-4xl" />,
       title: "Rénovation Complète",
       description: "Modernisation, extension, mise aux normes, rénovation énergétique",
-      image: "https://images.unsplash.com/photo-1583847268964-4a4b7283c370?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+      image: "https://images.unsplash.com/photo-1583847268964-4a4b7283c370?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      href: "/services/renovation-complete"
     },
     {
       icon: <FaSnowflake className="text-4xl" />,
       title: "Services Divers Canada",
       description: "Déneigement, pavage, pneus, déménagement, assistance domicile",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      href: "/services/services-divers"
     },
     {
       icon: <FaTools className="text-4xl" />,
       title: "Devis Quantitatifs",
       description: "Estimation précise des coûts, matériaux, main d'œuvre, planning",
-      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      href: "/services/devis-quantitatifs"
     }
   ]
 
@@ -79,7 +85,8 @@ export default function Services() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="group relative bg-slate-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-700 hover:border-amber-500 transition-all duration-300"
+                className="group relative bg-slate-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-700 hover:border-amber-500 transition-all duration-300 cursor-pointer"
+                onClick={() => window.location.href = service.href}
               >
                 {/* Image Background */}
                 <div className="relative h-48 overflow-hidden">
@@ -102,9 +109,13 @@ export default function Services() {
                   <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-amber-500 transition-colors">
                     {service.title}
                   </h3>
-                  <p className="text-gray-300 leading-relaxed">
+                  <p className="text-gray-300 leading-relaxed mb-4">
                     {service.description}
                   </p>
+                  <div className="flex items-center gap-2 text-amber-500 group-hover:text-amber-400 transition-colors">
+                    <span className="text-sm font-medium">En savoir plus</span>
+                    <span className="transform group-hover:translate-x-1 transition-transform">→</span>
+                  </div>
                 </div>
               </motion.div>
             ))}
