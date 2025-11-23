@@ -1,7 +1,7 @@
 {
-  "name": "djomo-kamga-aristide-engineering",
+  "name": "fak-bru-solution-engineering",
   "version": "1.0.0",
-  "description": "DJOMO KAMGA ARISTIDE - Professional civil engineering and construction services including architectural design, structural calculations, cost estimates, turnkey projects, and comprehensive renovation services",
+  "description": "Fâk-brù Solution - Professional civil engineering and construction services including architectural design, structural calculations, cost estimates, turnkey projects, and comprehensive renovation services",
   "private": true,
   "scripts": {
     "dev": "next dev",

@@ -4,9 +4,9 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'DJOMO KAMGA ARISTIDE | Civil Engineering & Construction Services',
-  description: 'Professional civil engineer specializing in building construction. Offering architectural design, structural calculations, cost estimates, turnkey projects, renovation, and comprehensive construction services.',
-  keywords: 'DJOMO KAMGA ARISTIDE, civil engineering, building construction, architectural design, structural calculations, cost estimates, turnkey projects, construction renovation, snow removal, paving services',
+  title: 'Fâk-brù Solution | Civil Engineering & Construction Services',
+  description: 'Fâk-brù Solution - Professional civil engineering and construction services. Specializing in building construction, architectural design, structural calculations, cost estimates, turnkey projects, and comprehensive renovation services.',
+  keywords: 'Fâk-brù Solution, civil engineering, building construction, architectural design, structural calculations, cost estimates, turnkey projects, construction renovation, engineering services',
 }
 
 export default function RootLayout({ children }) {
