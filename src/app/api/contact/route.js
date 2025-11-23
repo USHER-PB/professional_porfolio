@@ -1,12 +1,12 @@
 import { NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY || 're_123456789') // Fallback for testing
+const resend = new Resend('re_MUkT6f1X_K9oJYJsW6T15Uh4YFUTo7X6X')
 
 export async function POST(request) {
   try {
     const body = await request.json()
-    const { name, email, subject, message, projectType } = body
+    const { name, email, subject, message, projectType, phone } = body
 
     // Validate required fields
     if (!name || !email || !message) {
@@ -33,7 +33,7 @@ export async function POST(request) {
       <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;">
         <p><strong>Nom:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Téléphone:</strong> ${body.phone || 'Non spécifié'}</p>
+        <p><strong>Téléphone:</strong> ${phone || 'Non spécifié'}</p>
         <p><strong>Type de projet:</strong> ${projectType || 'Non spécifié'}</p>
         <p><strong>Sujet:</strong> ${subject || 'Nouveau contact'}</p>
       </div>
@@ -51,59 +51,83 @@ export async function POST(request) {
       </div>
     `
 
+    // Method 1: Try Resend first (your real API key)
     try {
-      // Send email to your personal email for testing
       const { data, error } = await resend.emails.send({
-        from: 'contact@fakbru-solution.com', // This should be a verified domain in Resend
-        to: ['ushertchankoumi9@gmail.com'], // Your personal email for testing
+        from: 'onboarding@resend.dev',
+        to: ['ushertchankoumi9@gmail.com'],
         subject: emailSubject,
         html: emailContent,
-        replyTo: email // Allow direct reply to the sender
+        replyTo: email
       })
 
       if (error) {
         console.error('Resend API error:', error)
-        // Fallback: log the submission for development
-        console.log('Contact Form Submission (Fallback):', {
-          name,
-          email,
-          phone: body.phone,
-          projectType,
-          subject,
-          message,
-          timestamp: new Date().toISOString()
-        })
-        
-        return NextResponse.json(
-          { 
-            success: true, 
-            message: 'Message received! (Email service temporarily unavailable - logged for review)',
-            fallback: true
-          },
-          { status: 200 }
-        )
+        throw new Error(error.message)
       }
 
-      console.log('Email sent successfully:', data)
-
+      console.log('✅ Email sent successfully via Resend:', data.id)
+      
       return NextResponse.json(
         { 
           success: true, 
           message: 'Message envoyé avec succès! Nous vous contacterons dans les plus brefs délais.',
+          method: 'resend',
           emailId: data.id
         },
         { status: 200 }
       )
 
-    } catch (emailError) {
-      console.error('Email sending error:', emailError)
+    } catch (resendError) {
+      console.log('❌ Resend failed, using fallback logging...', resendError.message)
       
-      // Fallback response
+      // Fallback: Log and save to file
+      const submissionData = {
+        name,
+        email,
+        phone: phone || 'Non spécifié',
+        projectType: projectType || 'Non spécifié',
+        subject: subject || 'Nouveau contact',
+        message,
+        timestamp: new Date().toISOString(),
+        method: 'fallback'
+      }
+
+      // Log to console for immediate access
+      console.log('=== CONTACT FORM SUBMISSION ===')
+      console.log(JSON.stringify(submissionData, null, 2))
+      console.log('==============================')
+
+      // Try to save to a JSON file for persistence
+      try {
+        const fs = require('fs').promises
+        const path = require('path')
+        
+        const submissionsFile = path.join(process.cwd(), 'contact-submissions.json')
+        let submissions = []
+        
+        try {
+          const existingData = await fs.readFile(submissionsFile, 'utf8')
+          submissions = JSON.parse(existingData)
+        } catch (e) {
+          // File doesn't exist yet
+        }
+        
+        submissions.push(submissionData)
+        await fs.writeFile(submissionsFile, JSON.stringify(submissions, null, 2))
+        
+        console.log('✅ Submission saved to contact-submissions.json')
+        
+      } catch (fileError) {
+        console.log('Could not save to file:', fileError.message)
+      }
+
       return NextResponse.json(
         { 
           success: true, 
-          message: 'Message reçu! (Service email temporairement indisponible - nous traiterons votre demande manuellement)',
-          fallback: true
+          message: 'Message reçu! Nous traiterons votre demande manuellement dans les plus brefs délais.',
+          method: 'fallback',
+          submissionId: Date.now()
         },
         { status: 200 }
       )
