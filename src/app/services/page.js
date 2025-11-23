@@ -120,7 +120,7 @@ export default function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             className="text-3xl md:text-4xl font-bold text-white mb-4"
           >
-            Prêt à démarrer votre projet ?
+            Discutons de votre projet ?
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -128,7 +128,7 @@ export default function Services() {
             transition={{ delay: 0.2 }}
             className="text-xl text-amber-100 mb-8"
           >
-            Contactez-nous dès aujourd'hui pour un devis gratuit et personnalisé
+            Contactez-nous dès aujourd&apos;hui pour un devis gratuit et personnalisé
           </motion.p>
           <motion.button
             initial={{ opacity: 0, y: 20 }}

@@ -87,7 +87,7 @@ export default function About() {
             className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
           >
             Ingénieur civil spécialisé en construction bâtiment, nous mettons notre expertise 
-            technique et notre passion pour l'excellence au service de vos projets.
+            technique et notre passion pour l&apos;excellence au service de vos projets.
           </motion.p>
         </div>
       </section>
@@ -106,8 +106,8 @@ export default function About() {
               </h2>
               <p className="text-gray-300 leading-relaxed text-lg">
                 Fondée par un ingénieur civil passionné, Fâk-brù Solution est née de la volonté 
-                d'offrir des services de construction de haute qualité, alliant savoir-faire technique 
-                et innovation. Notre expertise couvre l'ensemble du cycle de vie des projets de construction.
+                d&apos;offrir des services de construction de haute qualité, alliant savoir-faire technique 
+                et innovation. Notre expertise couvre l&apos;ensemble du cycle de vie des projets de construction.
               </p>
               <p className="text-gray-300 leading-relaxed text-lg">
                 De la conception architecturale à la réalisation clé en main, en passant par les calculs 

@@ -226,7 +226,7 @@ export default function Contact() {
               {/* Working Hours */}
               <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700">
                 <h3 className="text-2xl font-bold text-white mb-6">
-                  Horaires <span className="text-amber-500">d'ouverture</span>
+                  Horaires <span className="text-amber-500">d&apos;ouverture</span>
                 </h3>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
@@ -247,7 +247,7 @@ export default function Contact() {
                 </h3>
                 <p className="text-amber-100 leading-relaxed">
                   Nous nous engageons à répondre à toutes vos demandes dans un délai de 24 heures 
-                  ouvrables. Pour les projets urgents, n'hésitez pas à nous contacter directement 
+                  ouvrables. Pour les projets urgents, n&apos;hésitez pas à nous contacter directement 
                   par téléphone ou WhatsApp.
                 </p>
               </div>
