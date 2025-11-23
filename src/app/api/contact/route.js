@@ -1,14 +1,17 @@
 import { NextResponse } from 'next/server'
+import { Resend } from 'resend'
+
+const resend = new Resend(process.env.RESEND_API_KEY || 're_123456789') // Fallback for testing
 
 export async function POST(request) {
   try {
     const body = await request.json()
-    const { name, email, subject, message } = body
+    const { name, email, subject, message, projectType } = body
 
     // Validate required fields
-    if (!name || !email || !subject || !message) {
+    if (!name || !email || !message) {
       return NextResponse.json(
-        { error: 'All fields are required' },
+        { error: 'Name, email, and message are required' },
         { status: 400 }
       )
     }
@@ -22,56 +25,94 @@ export async function POST(request) {
       )
     }
 
-    // Log the contact form submission (in production, you would send an email or save to database)
-    console.log('Contact Form Submission:', {
-      name,
-      email,
-      subject,
-      message,
-      timestamp: new Date().toISOString()
-    })
-
-    // TODO: In production, integrate with email service like:
-    // - SendGrid
-    // - Nodemailer
-    // - AWS SES
-    // - Resend
-    // Or save to a database
-
-    // Example with SendGrid (commented out - requires API key):
-    /*
-    const sgMail = require('@sendgrid/mail')
-    sgMail.setApiKey(process.env.SENDGRID_API_KEY)
-    
-    const msg = {
-      to: 'uncle@example.com',
-      from: 'noreply@yourdomain.com',
-      subject: `Portfolio Contact: ${subject}`,
-      text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
-      html: `
-        <h2>New Contact Form Submission</h2>
-        <p><strong>Name:</strong> ${name}</p>
+    // Prepare email content
+    const emailSubject = subject || `Nouveau contact de ${name} - ${projectType || 'Site Web'}`
+    const emailContent = `
+      <h2>Nouveau message du site web Fâk-brù Solution</h2>
+      
+      <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;">
+        <p><strong>Nom:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Subject:</strong> ${subject}</p>
-        <p><strong>Message:</strong></p>
-        <p>${message}</p>
-      `,
-    }
-    
-    await sgMail.send(msg)
-    */
+        <p><strong>Téléphone:</strong> ${body.phone || 'Non spécifié'}</p>
+        <p><strong>Type de projet:</strong> ${projectType || 'Non spécifié'}</p>
+        <p><strong>Sujet:</strong> ${subject || 'Nouveau contact'}</p>
+      </div>
+      
+      <div style="background: #ffffff; padding: 20px; border-left: 4px solid #f59e0b; margin: 20px 0;">
+        <h3 style="margin-top: 0;">Message:</h3>
+        <p style="white-space: pre-line;">${message}</p>
+      </div>
+      
+      <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">
+        <p style="color: #666; font-size: 14px;">
+          Envoyé depuis le formulaire de contact du site web Fâk-brù Solution<br />
+          Date: ${new Date().toLocaleString('fr-FR', { timeZone: 'Africa/Douala' })}
+        </p>
+      </div>
+    `
 
-    return NextResponse.json(
-      { 
-        success: true, 
-        message: 'Message received successfully! We will get back to you soon.' 
-      },
-      { status: 200 }
-    )
+    try {
+      // Send email to your personal email for testing
+      const { data, error } = await resend.emails.send({
+        from: 'contact@fakbru-solution.com', // This should be a verified domain in Resend
+        to: ['ushertchankoumi9@gmail.com'], // Your personal email for testing
+        subject: emailSubject,
+        html: emailContent,
+        replyTo: email // Allow direct reply to the sender
+      })
+
+      if (error) {
+        console.error('Resend API error:', error)
+        // Fallback: log the submission for development
+        console.log('Contact Form Submission (Fallback):', {
+          name,
+          email,
+          phone: body.phone,
+          projectType,
+          subject,
+          message,
+          timestamp: new Date().toISOString()
+        })
+        
+        return NextResponse.json(
+          { 
+            success: true, 
+            message: 'Message received! (Email service temporarily unavailable - logged for review)',
+            fallback: true
+          },
+          { status: 200 }
+        )
+      }
+
+      console.log('Email sent successfully:', data)
+
+      return NextResponse.json(
+        { 
+          success: true, 
+          message: 'Message envoyé avec succès! Nous vous contacterons dans les plus brefs délais.',
+          emailId: data.id
+        },
+        { status: 200 }
+      )
+
+    } catch (emailError) {
+      console.error('Email sending error:', emailError)
+      
+      // Fallback response
+      return NextResponse.json(
+        { 
+          success: true, 
+          message: 'Message reçu! (Service email temporairement indisponible - nous traiterons votre demande manuellement)',
+          fallback: true
+        },
+        { status: 200 }
+      )
+    }
+
   } catch (error) {
     console.error('Contact form error:', error)
     return NextResponse.json(
-      { error: 'Failed to process your request. Please try again later.' },
+      { error: 'Une erreur est survenue. Veuillez réessayer plus tard.' },
       { status: 500 }
     )
   }

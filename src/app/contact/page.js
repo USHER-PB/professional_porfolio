@@ -11,8 +11,12 @@ export default function Contact() {
     email: '',
     phone: '',
     projectType: '',
+    subject: '',
     message: ''
   })
+
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState(null)
 
   const handleChange = (e) => {
     setFormData({
@@ -21,12 +25,55 @@ export default function Contact() {
     })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Handle form submission
-    console.log('Form submitted:', formData)
-    // You would typically send this to your backend
-    alert('Merci pour votre message! Nous vous contacterons bientôt.')
+    setIsSubmitting(true)
+    setSubmitStatus(null)
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      const result = await response.json()
+
+      if (response.ok) {
+        setSubmitStatus({
+          success: true,
+          message: result.message
+        })
+        
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          projectType: '',
+          subject: '',
+          message: ''
+        })
+
+        // Log for debugging
+        console.log('Form submitted successfully:', result)
+      } else {
+        setSubmitStatus({
+          success: false,
+          message: result.error || 'Une erreur est survenue. Veuillez réessayer.'
+        })
+      }
+    } catch (error) {
+      console.error('Submit error:', error)
+      setSubmitStatus({
+        success: false,
+        message: 'Erreur de connexion. Veuillez réessayer plus tard.'
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const contactInfo = [
@@ -175,13 +222,29 @@ export default function Contact() {
                   ></textarea>
                 </div>
 
+                {/* Status Message */}
+                {submitStatus && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className={`p-4 rounded-lg ${
+                      submitStatus.success 
+                        ? 'bg-green-900/50 border border-green-600 text-green-300' 
+                        : 'bg-red-900/50 border border-red-600 text-red-300'
+                    }`}
+                  >
+                    {submitStatus.message}
+                  </motion.div>
+                )}
+
                 <motion.button
                   type="submit"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="w-full py-4 bg-gradient-to-r from-amber-600 to-amber-700 text-white rounded-lg font-bold text-lg hover:from-amber-700 hover:to-amber-800 transition-all shadow-xl"
+                  whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
+                  whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
+                  disabled={isSubmitting}
+                  className="w-full py-4 bg-gradient-to-r from-amber-600 to-amber-700 text-white rounded-lg font-bold text-lg hover:from-amber-700 hover:to-amber-800 transition-all shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Envoyer le message
+                  {isSubmitting ? 'Envoi en cours...' : 'Envoyer le message'}
                 </motion.button>
               </form>
             </motion.div>
