@@ -5,29 +5,6 @@ import { FaBuilding, FaAward, FaUsers, FaClock, FaCheckCircle, FaHardHat } from 
 import Navbar from '@/components/Navbar'
 
 export default function About() {
-  const timeline = [
-    {
-      year: "2020",
-      title: "Fondation de Fâk-brù Solution",
-      description: "Création de l'entreprise avec une vision d'excellence en ingénierie civile"
-    },
-    {
-      year: "2021",
-      title: "Expansion des Services",
-      description: "Diversification vers la rénovation et les services complémentaires"
-    },
-    {
-      year: "2022",
-      title: "Certification & Qualification",
-      description: "Obtention des certifications professionnelles et agréments"
-    },
-    {
-      year: "2023",
-      title: "Projets Majeurs",
-      description: "Réalisation de projets complexes en construction et rénovation"
-    }
-  ]
-
   const values = [
     {
       icon: <FaCheckCircle className="text-3xl" />,
@@ -123,42 +100,6 @@ export default function About() {
               <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center"></div>
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent"></div>
             </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Timeline */}
-      <section className="py-20 px-4 bg-slate-800/30">
-        <div className="max-w-6xl mx-auto">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="text-4xl font-bold text-white text-center mb-16"
-          >
-            Notre <span className="text-amber-500">Parcours</span>
-          </motion.h2>
-          <div className="space-y-8">
-            {timeline.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className={`flex flex-col lg:flex-row items-center gap-8 ${
-                  index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
-                }`}
-              >
-                <div className="flex-1">
-                  <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-amber-500 transition-all">
-                    <div className="text-amber-500 font-bold text-lg mb-2">{item.year}</div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{item.title}</h3>
-                    <p className="text-gray-300">{item.description}</p>
-                  </div>
-                </div>
-                <div className="w-4 h-4 bg-amber-500 rounded-full"></div>
-                <div className="flex-1"></div>
-              </motion.div>
-            ))}
           </div>
         </div>
       </section>
