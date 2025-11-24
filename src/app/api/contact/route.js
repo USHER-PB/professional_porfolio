@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
-const resend = new Resend('re_MUkT6f1X_K9oJYJsW6T15Uh4YFUTo7X6X')
+const resend = new Resend('re_dCHQX7kA_KGpsE5kg4TBfmRTTWUHGX2Aj')
 
 export async function POST(request) {
   try {
@@ -55,10 +55,10 @@ export async function POST(request) {
     try {
       const { data, error } = await resend.emails.send({
         from: 'onboarding@resend.dev',
-        to: ['ushertchankoumi9@gmail.com'],
+        to: ['fakbru@yahoo.com'], // Send directly to company email
         subject: emailSubject,
         html: emailContent,
-        replyTo: email
+        replyTo: email // Allow reply to sender
       })
 
       if (error) {
